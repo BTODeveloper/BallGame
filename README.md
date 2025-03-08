@@ -15,7 +15,7 @@ This project follows a modular, component-based architecture with clear separati
 
 ### Scene Initialization
 
-- Each scene has a dedicated **GameplaySceneInitializer** as an entry point
+- Each scene has a dedicated **Initializer** as an entry point
 - Scene initializers handle the ordered initialization of scene-specific managers
 - **GlobalManagers** persists across scenes for cross-scene references
 - The singleton-based approach was chosen as a lightweight solution without dependency injection frameworks (like ZenJect or VContainer)
