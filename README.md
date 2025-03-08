@@ -28,7 +28,7 @@ This project follows a modular, component-based architecture with clear separati
 - **Singleton Pattern (limited)**: Only for global access to critical systems via GlobalManagers
 - **Command Pattern**: For input handling and user interactions
 - **Component Pattern**: For modular behavior implementation
-- 
+
 ## Development Decisions
 
 - Used DOTween for UI animations to create smooth, polished transitions
