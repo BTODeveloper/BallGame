@@ -15,7 +15,7 @@ This project follows a modular, component-based architecture with clear separati
 
 ### Scene Initialization
 
-- Each scene has a dedicated **Initializer** as an entry point
+- Each scene has a dedicated **GameplaySceneInitializer** as an entry point
 - Scene initializers handle the ordered initialization of scene-specific managers
 - **GlobalManagers** persists across scenes for cross-scene references
 - The singleton-based approach was chosen as a lightweight solution without dependency injection frameworks (like ZenJect or VContainer)
@@ -36,6 +36,34 @@ This project follows a modular, component-based architecture with clear separati
 - **Command Pattern**: For input handling and user interactions
 - **Component Pattern**: For modular behavior implementation
 
+## Ball System Architecture
+
+The game uses a modular, data-driven approach for ball configuration and management:
+
+### Data Structure
+- **BallRootType**: Enum defining the fundamental ball types (Regular, Special)
+- **BallColorType**: Enum for visual variations within each type
+- **BallGroupConfiguration**: ScriptableObject that defines a ball type and its properties:
+  - Reference to the ball prefab
+  - Detection radius for matching
+  - List of visual data variations
+  - Pool settings configuration
+
+- **BallAppearanceData**: ScriptableObject for visual variants of each ball type:
+  - Color type
+  - Sprite reference
+  - Particle effects on match
+
+### Runtime Components
+- **BallSpawnerController**: Manages spawning, pooling and placement of balls
+- **Ball**: Individual ball behavior and interactions
+- **BallRuntimeDataWrapper**: Runtime state container passed during initialization
+
+This separation between configuration data and runtime components allows for:
+- Designer-friendly tweaking without code changes
+- Easy addition of new ball types and colors
+- Efficient asset management via Addressables
+- Performance optimization through object pooling
 
 ## Development Decisions
 
