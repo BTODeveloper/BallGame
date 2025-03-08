@@ -1,0 +1,78 @@
+# Match-3 Physics Game
+
+A physics-based Match-3 game developed as part of the Casual Friday home assignment.
+
+## Technical Overview
+
+### Architecture
+
+This project follows a modular, component-based architecture with clear separation of concerns:
+
+- **Core Systems**: Base classes and interfaces for scene management, initialization patterns, and game flow
+- **Manager Pattern**: Each major system is controlled by a dedicated manager 
+- **Event-Driven Communication**: Components communicate via events rather than direct references where appropriate
+- **Async Operations**: Using UniTask for asynchronous operations like scene loading and addressable assets
+
+### Key Components
+
+#### Scene Management
+- **SceneLoaderManager**: Handles scene transitions and event broadcasting
+- **AssetPreloader**: Loads necessary assets during startup via Addressables
+- **Fader**: Scene transition effects that listen to scene load events
+
+#### Game Systems
+- **GameplayManager**: Core game logic, including score tracking and end conditions
+- **BallManager**: Manages ball spawning, matching and explosions
+- **DifficultyManager**: Loads different difficulty settings via Addressables
+
+#### UI Systems
+- **PopupsManager**: Queue-based popup system with addressable loading
+- **GameplayUIManager**: Updates UI elements based on game events
+- **TextAnimationHelper**: Centralized text and UI animations with DOTween
+
+#### Data Persistence
+- **PlayerPrefsHelper**: Centralized player data management
+- **GameplaySettings**: ScriptableObject-based configuration for game parameters
+
+### Technical Features
+
+- **Addressable Asset System**: All game assets are loaded via Addressables for efficient memory management
+- **Object Pooling**: Ball and particle systems use object pooling for performance
+- **Physics-Based Gameplay**: Uses Unity physics for ball movement and collision
+- **Safe Area Handling**: UI adapts to different device notches and safe areas
+- **Adaptive Difficulty**: Three difficulty levels affecting gameplay parameters
+
+### Design Patterns Used
+
+- **Object Pool Pattern**: For efficient object reuse
+- **Observer Pattern**: For event-based communication
+- **Factory Pattern**: For ball creation
+- **Singleton Pattern (limited)**: Only for global access to critical systems
+- **Command Pattern**: For input handling and user interactions
+
+## Project Structure
+
+- **/Scripts/**
+  - **/Core/**: Base classes and core functionality
+  - **/Gameplay/**: Game mechanics and ball behavior
+  - **/UI/**: UI components and animations
+  - **/Managers/**: System managers
+  - **/Data/**: ScriptableObjects and data containers
+
+- **/Prefabs/**
+  - **/Balls/**: Ball variants and configurations
+  - **/UI/**: UI elements and popup prefabs
+  - **/Effects/**: Particle effects and visual elements
+
+- **/Scenes/**
+  - **LoadingScene**: Initial loading and asset preloading
+  - **MenuScene**: Main menu and settings
+  - **GameplayScene**: Core gameplay
+
+## Development Decisions
+
+- Used DOTween for UI animations to create smooth, polished transitions
+- Implemented a custom popup system with queuing for proper UI flow
+- Used ScriptableObjects for configuration to support designer-friendly tweaking
+- Followed clean architecture principles to maintain separation of concerns
+- Optimized for mobile with appropriate object pooling and asset management
