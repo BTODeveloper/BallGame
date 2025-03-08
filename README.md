@@ -1,6 +1,6 @@
 # Match-3 Physics Game
 
-A physics-based Match-3 game developed as part of the Casual Friday home assignment.
+A physics-based Match-3 game.
 
 ## Technical Overview
 
