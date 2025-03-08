@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Gameplay_Group_Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: Gameplay_Group_Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ea432b7d4ea685c49b7365c6cb2146d7
+  m_SerializeEntries:
+  - m_GUID: 039bbe7922c7f1847b41b67eb2583840
+    m_Address: Assets/Project/Data/Balls/All_Possible_Visual_Balls/Ball_Regular_Blue.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 249f2d7c150622f4fa38432374750332
+    m_Address: Assets/Project/Exam Files/Prefabs/Explosions/Explosion-4.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 341eedfa0d0ad8644b5cb9fe0293999c
+    m_Address: Assets/Project/Data/Balls/All_Possible_Visual_Balls/Ball_Regular_Red.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4473d9d85f7eabe4eb91877fabdd69cb
+    m_Address: Assets/Project/Exam Files/Prefabs/Explosions/Explosion-3.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f6ebd8b9800d3e4bb0d233e9bde1cfb
+    m_Address: Assets/Project/Data/Balls/Groups/Special_Balls_Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 588166b3a87c12a45a965e96af159fe6
+    m_Address: Assets/Project/Data/Balls/All_Possible_Visual_Balls/Ball_Regular_Yellow.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e70855d369aff448a624dfcc314d0cd
+    m_Address: Assets/Project/Data/Difficulties/Easy.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6854f10470f3a6240bcf8081a5cb6d77
+    m_Address: Assets/Project/Exam Files/Prefabs/Explosions/Explosion-1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76edcec65ef4c1b489754f64e6a7c147
+    m_Address: Assets/Project/Exam Files/Prefabs/Explosions/Explosion-5.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c97afd75d05d0f43b755cc57f25f6f7
+    m_Address: Assets/Project/Data/Balls/Groups/Regular_Balls_Config.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8210c68a7def3144989d382aa499664d
+    m_Address: Assets/Project/Data/Balls/All_Possible_Visual_Balls/Ball_Special_01.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92a8869db4baa7740923efcaf0a34348
+    m_Address: Assets/Project/Data/Balls/All_Possible_Visual_Balls/Ball_Regular_Purple.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f314623c44164a469e30cd8fdade70c
+    m_Address: Assets/Project/Data/Difficulties/Normal.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5710394edf487a48a420f4374ea5efc
+    m_Address: Assets/Project/Data/Difficulties/Hard.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c364037f01fe3bb40bf912d85c17034e
+    m_Address: Assets/Project/Exam Files/Prefabs/Explosions/Explosion-2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d00cdfccd4d78db4aad0580d1346511e
+    m_Address: Assets/Project/Prefabs/Balls/Ball.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df550a7e0a209784894a2d5ca9b13dbc
+    m_Address: Assets/Project/Exam Files/Prefabs/Explosions/Explosion-0.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fca4bd4db9df468419717d566b3f2fc1
+    m_Address: Assets/Project/Prefabs/Balls/Special_Ball.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Gameplay_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d61bf43ae42b80d4489a6c4f19931a90, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 2f391fbd494369a4c8a97769bea622fd, type: 2}
+    - {fileID: 11400000, guid: a8c1dd19ff913ab41a31e9e464e11d02, type: 2}

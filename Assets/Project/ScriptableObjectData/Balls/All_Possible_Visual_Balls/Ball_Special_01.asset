@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd3d87d59d2ffd4f9665f8ce1a452bd, type: 3}
+  m_Name: Ball_Special_01
+  m_EditorClassIdentifier: 
+  <BallColorType>k__BackingField: 5
+  <Sprite>k__BackingField: {fileID: 21300000, guid: af218e5e8e0041849b44dc51bebb3d46, type: 3}
+  <ParticleOnMatch>k__BackingField:
+    <SpawnSize>k__BackingField: 50
+    <RemoveAfterXSeconds>k__BackingField: 3
+    <ParticleReference>k__BackingField:
+      m_AssetGUID: 76edcec65ef4c1b489754f64e6a7c147
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
+    <PoolSettingsConfig>k__BackingField:
+      <Expandable>k__BackingField: 1
+      <PoolSize>k__BackingField: 2
+      <MaxPoolSize>k__BackingField: 6

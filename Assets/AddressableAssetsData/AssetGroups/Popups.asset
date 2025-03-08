@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Popups
+  m_EditorClassIdentifier: 
+  m_GroupName: Popups
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ec72ce009f65c7e4984f6b8f854ec7e4
+  m_SerializeEntries:
+  - m_GUID: 29a0cc92b8d07604a97c9a76023c8d85
+    m_Address: Assets/Project/Prefabs/Popups/Lose_Popup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ecc861d6b6960d479b15ca0497d404a
+    m_Address: Assets/Project/Prefabs/Popups/Settings_Popup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad94d0171ec8d59488bd89e39ef7db59
+    m_Address: Assets/Project/Prefabs/Popups/Win_Popup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5b6fdc53654b594bbb18ed7515add87
+    m_Address: Assets/Project/Prefabs/Popups/Start_Popup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload_Assets
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d61bf43ae42b80d4489a6c4f19931a90, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 030f077e99e16ba4e8f35362d5f5ee94, type: 2}
+    - {fileID: 11400000, guid: 32debc27f1adf4041bb8bc6cc8c0bdb8, type: 2}

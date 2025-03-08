@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c54767607fcc0e4c97d3724b92da4b8, type: 3}
+  m_Name: Regular_Balls_Config
+  m_EditorClassIdentifier: 
+  <BallRootType>k__BackingField: 0
+  <BallPrefab>k__BackingField:
+    m_AssetGUID: d00cdfccd4d78db4aad0580d1346511e
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  <Expandable>k__BackingField: 1
+  <DetectionRadius>k__BackingField: 0.35
+  <VisualDatas>k__BackingField:
+  - {fileID: 11400000, guid: 039bbe7922c7f1847b41b67eb2583840, type: 2}
+  - {fileID: 11400000, guid: 92a8869db4baa7740923efcaf0a34348, type: 2}
+  - {fileID: 11400000, guid: 588166b3a87c12a45a965e96af159fe6, type: 2}
+  - {fileID: 11400000, guid: 341eedfa0d0ad8644b5cb9fe0293999c, type: 2}
+  <PoolSettingsConfig>k__BackingField:
+    <PoolSize>k__BackingField: 65
+    <MaxPoolSize>k__BackingField: 80
