@@ -13,27 +13,6 @@ This project follows a modular, component-based architecture with clear separati
 - **Event-Driven Communication**: Components communicate via events rather than direct references where appropriate
 - **Async Operations**: Using UniTask for asynchronous operations like scene loading and addressable assets
 
-### Key Components
-
-#### Scene Management
-- **SceneLoaderManager**: Handles scene transitions and event broadcasting
-- **AssetPreloader**: Loads necessary assets during startup via Addressables
-- **Fader**: Scene transition effects that listen to scene load events
-
-#### Game Systems
-- **GameplayManager**: Core game logic, including score tracking and end conditions
-- **BallManager**: Manages ball spawning, matching and explosions
-- **DifficultyManager**: Loads different difficulty settings via Addressables
-
-#### UI Systems
-- **PopupsManager**: Queue-based popup system with addressable loading
-- **GameplayUIManager**: Updates UI elements based on game events
-- **TextAnimationHelper**: Centralized text and UI animations with DOTween
-
-#### Data Persistence
-- **PlayerPrefsHelper**: Centralized player data management
-- **GameplaySettings**: ScriptableObject-based configuration for game parameters
-
 ### Technical Features
 
 - **Addressable Asset System**: All game assets are loaded via Addressables for efficient memory management
@@ -44,31 +23,12 @@ This project follows a modular, component-based architecture with clear separati
 
 ### Design Patterns Used
 
-- **Object Pool Pattern**: For efficient object reuse
-- **Observer Pattern**: For event-based communication
-- **Factory Pattern**: For ball creation
-- **Singleton Pattern (limited)**: Only for global access to critical systems
+- **Object Pool Pattern**: For efficient object reuse with balls and particles
+- **Observer Pattern**: For event-based communication between components
+- **Singleton Pattern (limited)**: Only for global access to critical systems via GlobalManagers
 - **Command Pattern**: For input handling and user interactions
-
-## Project Structure
-
-- **/Scripts/**
-  - **/Core/**: Base classes and core functionality
-  - **/Gameplay/**: Game mechanics and ball behavior
-  - **/UI/**: UI components and animations
-  - **/Managers/**: System managers
-  - **/Data/**: ScriptableObjects and data containers
-
-- **/Prefabs/**
-  - **/Balls/**: Ball variants and configurations
-  - **/UI/**: UI elements and popup prefabs
-  - **/Effects/**: Particle effects and visual elements
-
-- **/Scenes/**
-  - **LoadingScene**: Initial loading and asset preloading
-  - **MenuScene**: Main menu and settings
-  - **GameplayScene**: Core gameplay
-
+- **Component Pattern**: For modular behavior implementation
+- 
 ## Development Decisions
 
 - Used DOTween for UI animations to create smooth, polished transitions
