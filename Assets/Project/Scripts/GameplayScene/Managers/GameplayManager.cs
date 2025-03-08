@@ -18,7 +18,8 @@ public class GameplayManager : BaseMono
     [SerializeField] private DifficultyManager difficultyManager;
 
     private GameplaySettings _currentSettings;
-    private GlobalGameplayManagers _globalManagers;
+    private GlobalGameplayManagers _globalGameplayManagers;
+    private GlobalManagers _globalManagers;
 
     // Game state
     private int _currentScore = 0;
@@ -27,9 +28,11 @@ public class GameplayManager : BaseMono
 
     public override async UniTask Init(object data = null)
     {
+        _globalManagers = GlobalManagers.Instance;
+        
         if (data is GlobalGameplayManagers globalManagers)
         {
-            _globalManagers = globalManagers;
+            _globalGameplayManagers = globalManagers;
         }
         
         RegisterToEvents();

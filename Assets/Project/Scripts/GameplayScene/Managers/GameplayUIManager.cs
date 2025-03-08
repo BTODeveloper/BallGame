@@ -6,36 +6,41 @@ using DG.Tweening;
 
 public class GameplayUIManager : BaseMono
 {
-    [Header("Score References")]
-    [SerializeField] private Image scoreFillAmount;
+    [Header("Score References")] [SerializeField]
+    private Image scoreFillAmount;
+
     [SerializeField] private TextMeshProUGUI currentScoreText;
 
-    [Header("Game Progress References")]
-    [SerializeField] private TextMeshProUGUI tapsLeftText;
+    [Header("Game Progress References")] [SerializeField]
+    private TextMeshProUGUI tapsLeftText;
+
     [SerializeField] private TextMeshProUGUI timerText;
-    
-    [Header("Missed animator")]
-    [SerializeField] private Animator missedAnimator;
-    
+
+    [Header("Missed animator")] [SerializeField]
+    private Animator missedAnimator;
+
     private Tweener _missTextTweener;
-    private GlobalGameplayManagers _globalManagers;
+    private GlobalManagers _globalManagers;
+    private GlobalGameplayManagers _globalGameplayManagers;
     private int _lastScore = 0;
 
     public override async UniTask Init(object data = null)
     {
-        if (data is GlobalGameplayManagers globalManagers)
+        _globalManagers = GlobalManagers.Instance;
+
+        if (data is GlobalGameplayManagers globalGameplayManagers)
         {
-            _globalManagers = globalManagers;
-            
+            _globalGameplayManagers = globalGameplayManagers;
+
             // Subscribe to events
-            _globalManagers.GameplayManager.OnScoreChanged += UpdateScore;
-            _globalManagers.GameplayManager.OnGameLost += HandleGameLost;
-            _globalManagers.GameplayManager.OnTapsChanged += UpdateTapsLeft;
-            _globalManagers.GameplayManager.OnTimeChanged += UpdateTimer;
-            _globalManagers.GameplayManager.OnGameWon += HandleGameWon;
-            _globalManagers.GameplayManager.OnMissed += OnMissed;
+            _globalGameplayManagers.GameplayManager.OnScoreChanged += UpdateScore;
+            _globalGameplayManagers.GameplayManager.OnGameLost += HandleGameLost;
+            _globalGameplayManagers.GameplayManager.OnTapsChanged += UpdateTapsLeft;
+            _globalGameplayManagers.GameplayManager.OnTimeChanged += UpdateTimer;
+            _globalGameplayManagers.GameplayManager.OnGameWon += HandleGameWon;
+            _globalGameplayManagers.GameplayManager.OnMissed += OnMissed;
         }
-        
+
         await base.Init(data);
     }
 
@@ -47,21 +52,21 @@ public class GameplayUIManager : BaseMono
 
     private void HandleGameWon()
     {
-        // Show win popup
-        _globalManagers.PopupsManager.ShowPopup(PopupsManager.PopupType.Win_Popup).Forget();
+        if (_globalManagers != null)
+            _globalManagers.PopupsManager.ShowPopup(PopupsManager.PopupType.Win_Popup).Forget();
     }
 
     private void HandleGameLost()
     {
-        // Show lose popup
-        _globalManagers.PopupsManager.ShowPopup(PopupsManager.PopupType.Lose_Popup).Forget();
+        if (_globalManagers != null)
+            _globalManagers.PopupsManager.ShowPopup(PopupsManager.PopupType.Lose_Popup).Forget();
     }
 
     private void UpdateScore(int currentScore, int targetScore)
     {
         // Animate the text
         TextAnimationHelper.AnimateFractionText(currentScoreText, _lastScore, currentScore, targetScore, true);
-    
+
         // Animate the fill
         TextAnimationHelper.AnimateProgressBar(
             scoreFillAmount,
@@ -71,7 +76,7 @@ public class GameplayUIManager : BaseMono
             0.5f,
             Ease.OutQuad
         );
-    
+
         _lastScore = currentScore;
     }
 
@@ -101,15 +106,15 @@ public class GameplayUIManager : BaseMono
     private void OnDestroy()
     {
         _missTextTweener?.Kill();
-        
-        if (_globalManagers != null && _globalManagers.GameplayManager != null)
+
+        if (_globalManagers != null && _globalGameplayManagers.GameplayManager != null)
         {
-            _globalManagers.GameplayManager.OnScoreChanged -= UpdateScore;
-            _globalManagers.GameplayManager.OnGameLost -= HandleGameLost;
-            _globalManagers.GameplayManager.OnTapsChanged -= UpdateTapsLeft;
-            _globalManagers.GameplayManager.OnTimeChanged -= UpdateTimer;
-            _globalManagers.GameplayManager.OnGameWon -= HandleGameWon;
-            _globalManagers.GameplayManager.OnMissed -= OnMissed;
+            _globalGameplayManagers.GameplayManager.OnScoreChanged -= UpdateScore;
+            _globalGameplayManagers.GameplayManager.OnGameLost -= HandleGameLost;
+            _globalGameplayManagers.GameplayManager.OnTapsChanged -= UpdateTapsLeft;
+            _globalGameplayManagers.GameplayManager.OnTimeChanged -= UpdateTimer;
+            _globalGameplayManagers.GameplayManager.OnGameWon -= HandleGameWon;
+            _globalGameplayManagers.GameplayManager.OnMissed -= OnMissed;
         }
     }
 }
